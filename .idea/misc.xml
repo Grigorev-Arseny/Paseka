@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/drawable/chevron_left.xml" value="0.1" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/drawable/chevron_right.xml" value="0.1" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/drawable/delete.xml" value="0.251" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/drawable/ic_launcher_background.xml" value="0.251" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/drawable/pencil.xml" value="0.251" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/drawable/plus.xml" value="0.1605" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/drawable/plus_box.xml" value="0.251" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/drawable/rounded_corners.xml" value="0.1605" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/activity_about.xml" value="0.16893115942028986" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/activity_category.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/activity_directories.xml" value="0.1" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/activity_inventory.xml" value="0.16893115942028986" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/activity_inventory_modify.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/fragment_bees_list.xml" value="0.1" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/fragment_hives_list.xml" value="0.16893115942028986" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/fragment_scheduler_list.xml" value="0.16893115942028986" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/fragment_traps_list.xml" value="0.16893115942028986" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/hive_list_item.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/inventory_list_item.xml" value="0.1875" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/inventory_list_item_selected.xml" value="0.16893115942028986" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/scheduler_cell.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/spinner_item_bold.xml" value="0.330749354005168" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/menu/inventory_menu.xml" value="0.1" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/menu/main_menu.xml" value="0.3453703703703704" />
+        <entry key="..\:/Users/Evgen/AppData/Local/Android/Sdk/platforms/android-33/data/res/layout/simple_list_item_activated_1.xml" value="0.16893115942028986" />
+        <entry key="..\:/Users/Evgen/AppData/Local/Android/Sdk/platforms/android-33/data/res/layout/simple_spinner_item.xml" value="0.358695652173913" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
