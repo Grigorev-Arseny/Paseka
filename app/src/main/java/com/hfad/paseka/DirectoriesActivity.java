@@ -58,8 +58,8 @@ public class DirectoriesActivity extends AppCompatActivity {
             toast.show();
         }
 
-        directories = (Spinner) findViewById(R.id.directories);
-        directory = (ListView) findViewById(R.id.directory);
+        directories = findViewById(R.id.directories);
+        directory = findViewById(R.id.directory);
         btn_add = findViewById(R.id.add);
         btn_edit = findViewById(R.id.edit);
         btn_delete = findViewById(R.id.delete);

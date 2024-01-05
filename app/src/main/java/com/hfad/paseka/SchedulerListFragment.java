@@ -118,8 +118,8 @@ public class SchedulerListFragment extends Fragment implements SchedulerAdapter.
 
 
 class SchedulerAdapter extends RecyclerView.Adapter<SchedulerAdapter.SchedulerViewHolder> {
-    private ArrayList<String> monthDays;
-    private OnItemListener onItemListener;
+    private final ArrayList<String> monthDays;
+    private final OnItemListener onItemListener;
 
     public SchedulerAdapter(ArrayList<String> monthDays, OnItemListener onItemListener) {
         this.monthDays = monthDays;
@@ -152,8 +152,8 @@ class SchedulerAdapter extends RecyclerView.Adapter<SchedulerAdapter.SchedulerVi
     }
 
     class SchedulerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        private TextView dayCell;
-        private SchedulerAdapter.OnItemListener onItemListener;
+        private final TextView dayCell;
+        private final SchedulerAdapter.OnItemListener onItemListener;
 
         public SchedulerViewHolder(@NonNull View itemView, OnItemListener onItemListener) {
             super(itemView);

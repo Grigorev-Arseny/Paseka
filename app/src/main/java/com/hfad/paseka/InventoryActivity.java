@@ -75,8 +75,8 @@ public class InventoryActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.inventory_menu, menu);
 
-        btn_menu_edit = (MenuItem) menu.getItem(0);
-        btn_menu_delete = (MenuItem) menu.getItem(1);
+        btn_menu_edit = menu.getItem(0);
+        btn_menu_delete = menu.getItem(1);
 
         btn_menu_edit.getIcon().setTint(Colors.getBackgroundFloating());
         btn_menu_delete.getIcon().setTint(Colors.getBackgroundFloating());
@@ -147,10 +147,10 @@ public class InventoryActivity extends AppCompatActivity {
             toast.show();
         }
 
-        locations = (Spinner) findViewById(R.id.locations);
-        category = (Spinner) findViewById(R.id.category);
-        inventory = (RecyclerView) findViewById(R.id.inventory);
-        btn_add = (ImageButton) findViewById(R.id.add);
+        locations = findViewById(R.id.locations);
+        category = findViewById(R.id.category);
+        inventory = findViewById(R.id.inventory);
+        btn_add = findViewById(R.id.add);
 
         inventory.setLayoutManager(new LinearLayoutManager(this));
         inventory_adapter = new InventoryAdapter(this, getInventory());
@@ -240,7 +240,7 @@ public class InventoryActivity extends AppCompatActivity {
 
 
 class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.InventoryViewHolder> {
-    private Context context;
+    private final Context context;
     private Cursor cursor;
     private InventoryViewHolder selected_item;
 
@@ -335,12 +335,12 @@ class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.InventoryVi
     }
 
     public class InventoryHiveViewHolder extends InventoryViewHolder {
-        private TextView number_text_view;
-        private TextView type_text_view;
-        private TextView address_text_view;
+        private final TextView number_text_view;
+        private final TextView type_text_view;
+        private final TextView address_text_view;
 
-        private TextView description_text_view;
-        private TextView made_text_view;
+        private final TextView description_text_view;
+        private final TextView made_text_view;
 
         public InventoryHiveViewHolder(@NonNull View itemView) {
             super(itemView);
