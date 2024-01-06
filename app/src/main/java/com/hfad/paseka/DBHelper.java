@@ -59,7 +59,7 @@ public class DBHelper extends SQLiteOpenHelper {
             "category_id INTEGER, number INTEGER, made NUMERIC, type_id INTEGER, size INTEGER, location_id INTEGER, description TEXT, hive_id INTEGER, deleted TEXT, deleted_date NUMERIC);");
 
         db.execSQL("CREATE TABLE Bees (_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "breed_id INTEGER, bought NUMERIC, queen_birth NUMERIC, hive_id INTEGER, trap_id INTEGER);");
+                "breed_id INTEGER, bought NUMERIC, queen_birth NUMERIC, hive_id INTEGER, deleted TEXT, deleted_date NUMERIC);");
 
 
         // ДАЛЕЕ КОД НАПОЛНЕНИЯ БД ДЛЯ ТЕСТОВ - УДАЛИТЬ!
