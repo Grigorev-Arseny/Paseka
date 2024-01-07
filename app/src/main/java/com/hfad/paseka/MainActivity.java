@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         MainVPAdapter mainVPAdapter = new MainVPAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         mainVPAdapter.addFragment(new SchedulerListFragment(), "Scheduler");
         mainVPAdapter.addFragment(new BeesListFragment(), "Bees");
-        mainVPAdapter.addFragment(new HivesListFragment(), "Hives");
+        //mainVPAdapter.addFragment(new HivesListFragment(), "Hives");
         mainVPAdapter.addFragment(new TrapsListFragment(), "Traps");
         main_pager.setAdapter(mainVPAdapter);
 
