@@ -8,7 +8,8 @@ public class Colors {
     private static int primary;
     private static int container;
     private static int accent;
-    private  static int backgroundFloating;
+    private static int backgroundFloating;
+    private static int textAppearanceListItemSecondary;
 
     public static void init(Context context) {
         TypedValue typedValue;
@@ -29,6 +30,10 @@ public class Colors {
         typedValue = new TypedValue();
         theme.resolveAttribute(com.google.android.material.R.attr.colorBackgroundFloating, typedValue, true);
         backgroundFloating = typedValue.data;
+
+        typedValue = new TypedValue();
+        theme.resolveAttribute(com.google.android.material.R.attr.textAppearanceListItemSecondary, typedValue, true);
+        textAppearanceListItemSecondary = typedValue.data;
     }
 
     public static int getPrimary() {
@@ -46,4 +51,6 @@ public class Colors {
     public static int getBackgroundFloating() {
         return backgroundFloating;
     }
+
+    public static int getTextAppearanceListItemSecondary() { return textAppearanceListItemSecondary; }
 }

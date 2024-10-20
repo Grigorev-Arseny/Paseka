@@ -1,10 +1,12 @@
 package com.hfad.paseka;
 
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.ContentValues;
@@ -36,8 +38,13 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.text.SimpleDateFormat;
+import java.util.concurrent.CompletableFuture;
+
+import androidx.activity.result.contract.ActivityResultContract;
+import androidx.activity.result.*;
 
 
 
@@ -216,32 +223,93 @@ public class InventoryActivity extends AppCompatActivity {
         });
     }
 
+    /*@Override
+    protected void onRestart() {
+        super.onRestart();
+
+        inventory_adapter.swapCursor(getInventory());
+        inventory_adapter.clearSelection();
+    }*/
+
     private Cursor getInventory() {
         return db.rawQuery(
             "SELECT I._id, I.category_id, I.number, DATE(I.made) AS made, I.size, I.description, L.address, T.type FROM Inventory AS I " +
                     "LEFT JOIN Locations AS L ON L._id = I.location_id " +
                     "LEFT JOIN HiveTypes AS T ON T._id = I.type_id " +
-                    "WHERE deleted IS NULL AND category_id = " + category_id +
+                    "WHERE deleted_date IS NULL AND category_id = " + category_id +
                     (location_id == 0 ? "" : " AND location_id = " + location_id) +
                     " ORDER BY L.address, I.number", null);
     }
 
     public void onAddClick(View view) {
-        Intent intent = new Intent(this, InventoryModifyActivity.class);
+        /*Intent intent = new Intent(this, InventoryModifyActivity.class);
         intent.putExtra(EXTRA_ACTION, Action.Add);
         intent.putExtra(EXTRA_ROW_ID, 0L);
-        startActivity(intent);
+        startActivityForResult(intent, 1);*/
+
+        modify_launcher.launch(new InventoryModifyExtras(Action.Add, 0L));
     }
 
     public void setInventoryId(long id) {
         this.inventory_id = id;
     }
+
+    class InventoryModifyExtras {
+        public Action action;
+        public Long inventory_id;
+
+        public InventoryModifyExtras(Action action, Long inventory_id) {
+            this.action = action;
+            this.inventory_id = inventory_id;
+        }
+    }
+
+    class InventoryModifyContract extends ActivityResultContract<InventoryModifyExtras, Long> {
+        public Intent createIntent(Context context, InventoryModifyExtras extras) {
+            Intent intent = new Intent(context, InventoryModifyActivity.class);
+            intent.putExtra(EXTRA_ACTION, extras.action);
+            intent.putExtra(EXTRA_ROW_ID, extras.inventory_id);
+            return intent;
+        }
+
+        public Long parseResult(int resultCode, Intent intent) {
+            return resultCode == Activity.RESULT_OK ?
+                (long) intent.getSerializableExtra(InventoryActivity.EXTRA_ROW_ID) : null;
+        }
+    }
+
+    ActivityResultLauncher<InventoryModifyExtras> modify_launcher = registerForActivityResult(
+        new InventoryModifyContract(),
+        new ActivityResultCallback<Long>() {
+            @Override
+            public void onActivityResult(Long inventory_id) {
+                Log.d("PASEKA", "modify_launcher " + inventory_id);
+                //inventory_adapter.cursor.moveToPosition(Math.toIntExact(inventory_id));
+                //inventory_adapter.setHasStableIds(true);
+                //((InventoryAdapter.InventoryHiveViewHolder)inventory.findViewHolderForItemId(inventory_id)).setSelection();
+                //Log.d("PASEKA", inventory.findViewHolderForItemId(inventory_id).toString());
+
+                /*CompletableFuture<Void> asyncOp = CompletableFuture.runAsync(
+                    () -> inventory_adapter.swapCursor(getInventory())
+                );
+                asyncOp.join();
+                inventory_adapter.setSelectedByRowId(inventory_id);*/
+
+                //inventory_adapter.swapCursor(getInventory());
+                //inventory_adapter.setSelectedByRowId(inventory_id);
+
+                inventory_adapter.swapCursor(getInventory());
+                //inventory_adapter.
+                //inventory.getLayoutManager().scrollToPosition();
+            }
+        });
 }
 
 
 class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.InventoryViewHolder> {
     private final Context context;
     private Cursor cursor;
+    //private ArrayList<InventoryHiveViewHolder> view_holders;
     private InventoryViewHolder selected_item;
 
     //enum Type {Common, Selected}
@@ -249,6 +317,7 @@ class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.InventoryVi
     public InventoryAdapter(Context context, Cursor cursor) {
         this.context = context;
         this.cursor = cursor;
+        //this.view_holders = new ArrayList<>();
     }
 
     @NonNull
@@ -256,8 +325,22 @@ class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.InventoryVi
     public InventoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.inventory_list_item, parent, false);
-        return new InventoryHiveViewHolder(view);
+        InventoryHiveViewHolder vh = new InventoryHiveViewHolder(view);
+        //this.view_holders.add(vh);
+        return vh;
     }
+
+    /*public void setSelectedByRowId(long id) {
+        for (InventoryHiveViewHolder vh : view_holders) {
+            if (vh.row_id == id) {
+                vh.setSelection();
+                Log.d("PASEKA", "setSelectedByRowId FIND");
+            }
+            else {
+                Log.d("PASEKA", "setSelectedByRowId vh id: " + vh.row_id);
+            }
+        }
+    }*/
 
     @Override
     public void onBindViewHolder(@NonNull InventoryViewHolder holder, int position) {

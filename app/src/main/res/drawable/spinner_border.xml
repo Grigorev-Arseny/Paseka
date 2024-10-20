@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+
+        <layer-list>
+
+            <item>
+                <shape android:shape="rectangle">
+                    <padding
+                        android:left="0dp"
+                        android:top="0dp"
+                        android:right="0dp"
+                        android:bottom="0dp"
+                        />
+
+                    <gradient android:startColor="#00c4c7a9" android:endColor="#00d6dadf" android:angle="270" />
+                    <stroke android:width="2px" android:color="#0004fa" />
+                    <corners android:radius="2dp" />
+                </shape>
+            </item>
+
+            <item>
+
+                <bitmap android:gravity="center|right" android:src="@drawable/expand"/>
+<!--                <scale-->
+<!--                    android:gravity="center|right"-->
+<!--                    android:drawable="@drawable/chevron_left"-->
+<!--                    android:height="20px"-->
+<!--                    android:width="20px"></scale>-->
+
+            </item>
+
+        </layer-list>
+
+    </item>
+
+</selector>

@@ -9,6 +9,19 @@
 
     <string name="delete_inventory_title">Укажите причину удаления:</string>
 
+    <string name="inventory_modify_category">Категория инвентаря:</string>
+    <string name="inventory_modify_inventory_number">Инвентарный номер:</string>
+    <string name="inventory_modify_number">Номер улья:</string>
+    <string name="inventory_modify_hive_type">Тип улья:</string>
+    <string name="inventory_modify_size">Размер улья (кол-во рамок):</string>
+    <string name="inventory_modify_location">Местоположение:</string>
+    <string name="inventory_modify_description">Дополнительная информация:</string>
+    <string name="inventory_modify_broken">Требует ремонта</string>
+
+    <!-- ACTIONS -->
+    <string name="action_Add">Добавить</string>
+    <string name="action_Edit">Изменить</string>
+    <string name="action_Delete">Удалить</string>
 
     <!-- ГЛАВНОЕ МЕНЮ -->
     <string name="menu_inventory">Инвентарь</string>

@@ -11,12 +11,15 @@
         <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/drawable/plus.xml" value="0.1605" />
         <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/drawable/plus_box.xml" value="0.251" />
         <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/drawable/rounded_corners.xml" value="0.1605" />
-        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/activity_about.xml" value="0.16893115942028986" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/drawable/spinner_border.xml" value="0.1" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/drawable/textview_border.xml" value="0.1" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/activity_about.xml" value="0.1" />
         <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/activity_category.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/activity_directories.xml" value="0.1" />
         <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/activity_inventory.xml" value="0.16893115942028986" />
-        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/activity_inventory_modify.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/activity_inventory_modify.xml" value="0.42287917737789205" />
         <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/bees_list_item.xml" value="0.1" />
         <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/fragment_bees_list.xml" value="0.1" />
         <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/fragment_hives_list.xml" value="0.16893115942028986" />
         <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/fragment_scheduler_list.xml" value="0.16893115942028986" />
@@ -26,6 +29,8 @@
         <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/inventory_list_item_selected.xml" value="0.16893115942028986" />
         <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/scheduler_cell.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/spinner_item_bold.xml" value="0.330749354005168" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/spinner_nothing_dropdown_item.xml" value="0.1490036231884058" />
+        <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/layout/spinner_row_nothing_selected.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/menu/inventory_menu.xml" value="0.1" />
         <entry key="..\:/Users/Evgen/AndroidStudioProjects/Paseka/app/src/main/res/menu/main_menu.xml" value="0.3453703703703704" />
         <entry key="..\:/Users/Evgen/AppData/Local/Android/Sdk/platforms/android-33/data/res/layout/simple_list_item_activated_1.xml" value="0.16893115942028986" />

@@ -56,10 +56,10 @@ public class DBHelper extends SQLiteOpenHelper {
         }
 
         db.execSQL("CREATE TABLE Inventory (_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-            "category_id INTEGER, number INTEGER, made NUMERIC, type_id INTEGER, size INTEGER, location_id INTEGER, description TEXT, hive_id INTEGER, deleted TEXT, deleted_date NUMERIC);");
+            "category_id INTEGER, inventory_number INTEGER, number INTEGER, made NUMERIC, type_id INTEGER, size INTEGER, frames INTEGER, location_id INTEGER, description TEXT, hive_id INTEGER, deleted TEXT, deleted_date NUMERIC, broken NUMERIC);");
 
         db.execSQL("CREATE TABLE Bees (_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "breed_id INTEGER, bought NUMERIC, queen_birth NUMERIC, hive_id INTEGER, deleted TEXT, deleted_date NUMERIC);");
+                "breed_id INTEGER, bought NUMERIC, queen_birth NUMERIC, hive_id INTEGER, deleted TEXT, deleted_date NUMERIC, description TEXT);");
 
 
         // ДАЛЕЕ КОД НАПОЛНЕНИЯ БД ДЛЯ ТЕСТОВ - УДАЛИТЬ!
@@ -75,42 +75,96 @@ public class DBHelper extends SQLiteOpenHelper {
 
         values = new ContentValues();
         values.put("category_id", 1);
+        values.put("inventory_number", "1000");
         values.put("number", 1);
         values.put("made", "2023-02-18 00:00:00.000");
         values.put("type_id", 1);
-        values.put("size", 32);
+        values.put("size", 12);
+        values.put("frames", 12);
         values.put("location_id", 1);
         values.put("description", "test");
+        values.put("broken", 1);
         db.insert("Inventory", null, values);
 
         values = new ContentValues();
         values.put("category_id", 1);
+        values.put("inventory_number", "2000");
         values.put("number", 999);
         values.put("made", "2023-02-18 00:00:00.000");
         values.put("type_id", 1);
-        values.put("size", 32);
+        values.put("size", 12);
+        values.put("frames", 12);
         values.put("location_id", 1);
         values.put("description", "test");
+        values.put("broken", 0);
         db.insert("Inventory", null, values);
 
         values = new ContentValues();
         values.put("category_id", 1);
+        values.put("inventory_number", "3000");
         values.put("number", 2);
         values.put("made", "2023-02-19 00:00:00.000");
         values.put("type_id", 2);
-        values.put("size", 42);
+        values.put("size", 12);
         values.put("location_id", 2);
         values.put("description", "test");
+        values.put("broken", 0);
         db.insert("Inventory", null, values);
 
         values = new ContentValues();
         values.put("category_id", 2);
+        values.put("inventory_number", "К1000");
         values.put("made", "2023-02-19 00:00:00.000");
         values.put("type_id", 2);
-        values.put("size", 42);
+        values.put("size", 12);
+        values.put("frames", 6);
         values.put("location_id", 2);
         values.put("description", "test");
+        values.put("hive_id", 1);
+        values.put("broken", 0);
         db.insert("Inventory", null, values);
+
+        values = new ContentValues();
+        values.put("category_id", 3);
+        values.put("inventory_number", "М1000");
+        values.put("made", "2023-02-19 00:00:00.000");
+        values.put("type_id", 2);
+        values.put("size", 12);
+        values.put("frames", 7);
+        values.put("location_id", 2);
+        values.put("description", "test");
+        values.put("hive_id", 2);
+        values.put("broken", 0);
+        db.insert("Inventory", null, values);
+
+        values = new ContentValues();
+        values.put("category_id", 3);
+        values.put("inventory_number", "М2000");
+        values.put("made", "2023-02-19 00:00:00.000");
+        values.put("type_id", 2);
+        values.put("size", 12);
+        values.put("frames", 8);
+        values.put("location_id", 2);
+        values.put("description", "test");
+        values.put("hive_id", 2);
+        values.put("broken", 0);
+        db.insert("Inventory", null, values);
+
+        values = new ContentValues();
+        values.put("breed_id", 1);
+        values.put("bought", "2020-01-19 00:00:00.000");
+        values.put("queen_birth", "2021-01-19 00:00:00.000");
+        values.put("hive_id", 1);
+        values.put("description", "test1");
+        db.insert("Bees", null, values);
+
+        values = new ContentValues();
+        values.put("breed_id", 1);
+        values.put("bought", "2020-02-19 00:00:00.000");
+        values.put("queen_birth", "2021-02-19 00:00:00.000");
+        values.put("hive_id", 2);
+        values.put("description", "test2");
+        db.insert("Bees", null, values);
     }
 
     @Override

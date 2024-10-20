@@ -3,6 +3,7 @@ package com.hfad.paseka;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -75,7 +76,7 @@ public class SchedulerListFragment extends Fragment implements SchedulerAdapter.
     }
 
     private void setDateCaption() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM yyyy");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("LLLL yyyy");
         dateCaption.setText(selectedDate.format(formatter));
         ArrayList<String> monthDays = daysInMonthArray(selectedDate);
 
@@ -152,24 +153,39 @@ class SchedulerAdapter extends RecyclerView.Adapter<SchedulerAdapter.SchedulerVi
     }
 
     class SchedulerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        private final TextView dayCell;
+        private final CardView border_view;
+        private final CardView background_view;
+        private final TextView text_view;
         private final SchedulerAdapter.OnItemListener onItemListener;
 
         public SchedulerViewHolder(@NonNull View itemView, OnItemListener onItemListener) {
             super(itemView);
 
-            dayCell = itemView.findViewById(R.id.day_cell);
+            border_view = itemView.findViewById(R.id.border);
+            background_view = itemView.findViewById(R.id.background);
+            text_view = itemView.findViewById(R.id.text);
             this.onItemListener = onItemListener;
             itemView.setOnClickListener(this);
         }
 
         public void bind(String day) {
-            dayCell.setText(day);
+            if (day.length() == 0) {
+                border_view.setCardBackgroundColor(Colors.getContainer());
+                background_view.setCardBackgroundColor(Colors.getContainer());
+                border_view.setCardElevation(0);
+            }
+            else {
+                border_view.setCardBackgroundColor(Colors.getAccent());
+                background_view.setCardBackgroundColor(Colors.getBackgroundFloating());
+                border_view.setCardElevation(4);
+            }
+
+            text_view.setText(day);
         }
 
         @Override
         public void onClick(View view) {
-            onItemListener.onItemClick(getAdapterPosition(), (String)dayCell.getText());
+            onItemListener.onItemClick(getAdapterPosition(), (String)text_view.getText());
         }
     }
 }
