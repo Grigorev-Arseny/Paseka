@@ -10,6 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Paseka">
         <activity
+            android:name=".TaskExecuteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SchedulerActivity"
+            android:exported="false"
+            android:label="Пасека - Задачи" />
+        <activity
             android:name=".InventoryModifyActivity"
             android:exported="false" />
         <activity

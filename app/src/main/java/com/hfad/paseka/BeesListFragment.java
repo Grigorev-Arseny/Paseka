@@ -80,7 +80,7 @@ public class BeesListFragment extends Fragment {
                         "ORDER BY sort, UPPER(address)", null);
 
         // Создаем адаптер и слушателя выбора местоположения
-        Log.d("PASEKA", "create location adapter " + getActivity().getApplicationContext().toString());
+        //Log.d("PASEKA", "create location adapter " + getActivity().getApplicationContext().toString());
         CursorAdapter locations_adapter = new SimpleCursorAdapter(getActivity().getApplicationContext(),
                 //android.R.layout.simple_list_item_activated_1,
                 R.layout.spinner_item_bold,

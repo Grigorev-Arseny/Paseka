@@ -240,7 +240,7 @@ public class InventoryModifyActivity extends AppCompatActivity {
         }
 
         else {
-        (Toast.makeText(this, "Не все поля заполнены!", Toast.LENGTH_LONG)).show();
+            (Toast.makeText(this, "Не все поля заполнены!", Toast.LENGTH_LONG)).show();
         }
     }
 }

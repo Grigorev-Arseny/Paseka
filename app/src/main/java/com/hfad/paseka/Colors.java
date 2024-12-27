@@ -2,6 +2,7 @@ package com.hfad.paseka;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.util.TypedValue;
 
 public class Colors {
@@ -53,4 +54,14 @@ public class Colors {
     }
 
     public static int getTextAppearanceListItemSecondary() { return textAppearanceListItemSecondary; }
+
+    public static int getExpired() {
+        return Color.RED;
+    }
+    public static int getPresent() {
+        return Color.BLUE;
+    }
+    public static int getCompleted() {
+        return Color.GRAY;
+    }
 }

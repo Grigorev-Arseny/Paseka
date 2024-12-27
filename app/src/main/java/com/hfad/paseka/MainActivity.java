@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
             .setPositiveButton(R.string.delete, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
                     getApplicationContext().deleteDatabase(DBHelper.DB_NAME);
-                    Toast.makeText(getApplicationContext(),"База данных удалена.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), R.string.delete_db_result, Toast.LENGTH_LONG).show();
                 }
             })
             .setNegativeButton(R.string.cancel, null)

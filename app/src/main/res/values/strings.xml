@@ -6,6 +6,7 @@
     <string name="delete_row_confirm">Вы действительно хотите удалить запись?</string>
     <string name="delete_db_title">Удаление БД</string>
     <string name="delete_db_confirm">Вы действительно хотите удалить ВСЕ сохраненные данные приложения? Восстановление будет невозможно!</string>
+    <string name="delete_db_result">"База данных удалена."</string>
 
     <string name="delete_inventory_title">Укажите причину удаления:</string>
 
@@ -17,6 +18,25 @@
     <string name="inventory_modify_location">Местоположение:</string>
     <string name="inventory_modify_description">Дополнительная информация:</string>
     <string name="inventory_modify_broken">Требует ремонта</string>
+
+    <string name="inventory_scheduler_search_text">Найти задачи по названию</string>
+    <string name="inventory_scheduler_search_date">Найти задачи по дате</string>
+    <string name="inventory_scheduler_search_status">Найти задачи по статусу</string>
+
+    <string name="task_button_execute">Выполнить</string>
+    <string name="task_button_reject">Отменить</string>
+    <string name="task_button_edit">Изменить</string>
+    <string name="task_button_stop">Остановить</string>
+    <string name="task_stop_title">Остановка задачи</string>
+    <string name="task_stop_confirm">Вы действительно хотите остановить задачу?</string>
+    <string name="task_stop_result">Задача остановлена!</string>
+    <string name="task_reject_title">Отменить выполнение</string>
+    <string name="task_reject_confirm">Вы действительно хотите отменить выполнение задачи?</string>
+    <string name="task_reject_result">Выполнение задачи отменено!</string>
+    <string name="task_execute_title">Выполнить задачу</string>
+    <string name="task_execute_confirm">Задача выполнена и Вы действительно хотите изменить ее статус?</string>
+    <string name="task_execute_result">Задача выполнена!</string>
+
 
     <!-- ACTIONS -->
     <string name="action_Add">Добавить</string>
@@ -39,6 +59,15 @@
         <item>Неисправность</item>
         <item>Кража</item>
         <item>Другое</item>
+    </string-array>
+
+    <string-array name="action_statuses">
+        <item>Активные задачи</item>
+        <item>Ожидает выполнения</item>
+        <item>Просрочена</item>
+        <item>Выполнена</item>
+        <item>Отменена</item>
+        <item>Только остановленные</item>
     </string-array>
 
 

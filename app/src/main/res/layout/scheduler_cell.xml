@@ -36,6 +36,18 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
+            <TextView
+                android:id="@+id/task"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_margin="2dp"
+                android:background="@color/red"
+                android:layout_gravity="bottom"
+                android:textSize="20sp"
+                android:textColor="@color/black"/>
+
+
+
         </androidx.cardview.widget.CardView>
 
     </androidx.cardview.widget.CardView>
